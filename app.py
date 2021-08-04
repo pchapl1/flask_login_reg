@@ -29,7 +29,7 @@ def login():
     msg = ''
     print(request.form)
     
-    if request.method == 'POST' and len('username') in request.form and len('password') in request.form:
+    if request.method == 'POST' and len('username')>0 and len('password') > 0:
         session.pop('msg', None)
         form_username = request.form['username']
         form_password = request.form['password']
@@ -128,3 +128,4 @@ def reset_password():
     return render_template('reset_password.html', msg = msg)
 
 
+app.run(debug=True)
