@@ -5,7 +5,7 @@ from sqlalchemy import create_engine, and_ , or_ ,text
 from flask import Flask, render_template, request, redirect, url_for, session
 import re
 import bcrypt
-from .database import *
+from db import *
 
 app = Flask(__name__)
 app.secret_key = 'dev'
