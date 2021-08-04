@@ -27,7 +27,7 @@ def login():
 
     sql_session = start_session()
     msg = ''
-    print(request.form)
+    # print(request.form)
     
     if request.method == 'POST' and len('username')>0 and len('password') > 0:
         session.pop('msg', None)
