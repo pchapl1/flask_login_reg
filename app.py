@@ -127,5 +127,5 @@ def reset_password():
         return redirect(url_for('login'))
     return render_template('reset_password.html', msg = msg)
 
-app.run(port=8000, debug=True)
+app.run(debug=False)
 
